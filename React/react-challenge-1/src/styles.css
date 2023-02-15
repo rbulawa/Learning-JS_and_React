@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  background-color: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1a2e35;
+}
+
+.App {
+  text-align: center;
+  justify-content: center;
+  background-color: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  border-radius: 18px;
+  max-height: 650px;
+}
+
+h1 {
+  color: #fe5454;
+  letter-spacing: 2px;
+  line-height: 0.8;
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 35px;
+}
+
+p {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Main container */
+
+.left-side {
+  width: 500px;
+  padding: 50px 40px;
+}
+
+.right-side {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.right-side img {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 8px 0 45px 0;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #1a2e35;
+  transition: 0.2s all ease-in-out;
+}
+
+.social-icons a:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #828c8f;
+}
+
+/* Styling input fields */
+
+form {
+  padding: 10px;
+}
+
+form p:first-child {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  margin: 8px 0;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #bfc8ca;
+  background-color: #f7f8f9;
+  color: #777f81;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  margin: 0;
+  font: inherit;
+  color: #3e4647;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #777f81;
+  border-radius: 5px;
+  transform: translateY(0);
+  transition: 160ms all ease-in-out;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 10px 10px #ffffff;
+  background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked {
+  border: none;
+  background-color: #fe5454;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+label {
+  display: flex;
+  color: #777f81;
+  font-size: 12px;
+  margin-bottom: -6px;
+  margin-left: 0;
+}
+
+.form-input {
+  margin-bottom: 10px;
+}
+
+.policy {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.policy p {
+  font-size: 12px;
+}
+
+.text-deco {
+  color: #fe5454;
+  cursor: pointer;
+}
+
+.text-deco:hover {
+  color: #265a73;
+}
+
+/* Styling sign in buttons  */
+
+.sign-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 35px;
+  transition: 0.2s all ease-in-out;
+}
+
+.cta-button {
+  width: 50%;
+  border: none;
+  padding: 18px 0;
+  border-radius: 10px;
+  font-weight: 900;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.button-primary {
+  background-color: #fe5454;
+}
+
+.button-primary:hover {
+  background-color: #265a73;
+}
+
+.button-secondary {
+  background-color: #ffffff;
+  color: #fe5454;
+  border: 1px solid #fe5454;
+}
+
+.button-secondary:hover {
+  border: 1px solid #fff;
+  color: #265a73;
+}
+
+/* Media  */
+
+@media only screen and (max-width: 700px) {
+  .right-side {
+    display: none;
+  }
+}
